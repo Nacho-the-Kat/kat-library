@@ -1,0 +1,10 @@
+import { Meta } from "@storybook/react";
+import Heatmap from "../components/Heatmap";
+declare const _default: Meta<typeof Heatmap>;
+export default _default;
+export declare const CircleHeatmap: import("@storybook/csf").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, import("../components/Heatmap").HeatmapProps>;
+export declare const SquareHeatmap: import("@storybook/csf").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, import("../components/Heatmap").HeatmapProps>;
+export declare const WithHoverCircle: import("@storybook/csf").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, import("../components/Heatmap").HeatmapProps>;
+export declare const WithHoverSquare: import("@storybook/csf").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, import("../components/Heatmap").HeatmapProps>;
+export declare const WithClickEventsCircle: import("@storybook/csf").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, import("../components/Heatmap").HeatmapProps>;
+export declare const WithClickEventsSquare: import("@storybook/csf").AnnotatedStoryFn<import("@storybook/react").ReactRenderer, import("../components/Heatmap").HeatmapProps>;
