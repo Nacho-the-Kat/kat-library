@@ -1,14 +1,19 @@
 {
-  "name": "kat-library",
+  "name": "@nacho-the-kat/kat-library",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "@nacho-the-kat:registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "rollup -c",
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepublishOnly": "yarn build"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
@@ -42,11 +47,29 @@
     "postcss": "^8",
     "storybook": "^8.5.5",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "rollup": "^4.9.0",
+    "rollup-plugin-dts": "^6.0.0",
+    "rollup-plugin-postcss": "^4.0.0"
   },
   "eslintConfig": {
     "extends": [
       "plugin:storybook/recommended"
     ]
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "@headlessui/react": "^2.2.0",
+    "@heroicons/react": "^2.2.0"
   }
 }
