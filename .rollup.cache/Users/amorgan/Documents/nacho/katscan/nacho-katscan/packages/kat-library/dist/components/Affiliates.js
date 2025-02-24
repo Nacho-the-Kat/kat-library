@@ -1,0 +1,6 @@
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+const AffiliateComponent = ({ affiliates, displayMode = "iconsWithNames", layout = "horizontal", }) => {
+    return (_jsx("div", { className: `flex ${layout === "horizontal" ? "flex-row space-x-4" : "flex-col space-y-3"} items-center`, children: affiliates.map((affiliate, index) => (_jsx("div", { className: "flex items-center space-x-2", children: affiliate.url ? (_jsxs("a", { href: affiliate.url, target: "_blank", rel: "noopener noreferrer", className: "flex items-center space-x-2 hover:opacity-80 transition", children: [_jsx("img", { src: affiliate.icon, alt: affiliate.name, className: "w-8 h-8 rounded-full" }), displayMode === "iconsWithNames" && (_jsx("span", { className: "text-gray-700 dark:text-gray-300 text-sm font-medium", children: affiliate.name }))] })) : (_jsxs(_Fragment, { children: [_jsx("img", { src: affiliate.icon, alt: affiliate.name, className: "w-8 h-8 rounded-full" }), displayMode === "iconsWithNames" && (_jsx("span", { className: "text-gray-700 dark:text-gray-300 text-sm font-medium", children: affiliate.name }))] })) }, index))) }));
+};
+export default AffiliateComponent;
+//# sourceMappingURL=Affiliates.js.map

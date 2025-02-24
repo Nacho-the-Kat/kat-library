@@ -17,7 +17,7 @@ const config = [
     plugins: [
       resolve(),
       commonjs(),
-      typescript({ tsconfig: "./tsconfig.json" }),
+      typescript({ tsconfig: "./tsconfig.build.json" }),
       postcss({
         config: {
           path: "./postcss.config.js",
@@ -32,10 +32,10 @@ const config = [
     external: ["react", "react-dom", "@headlessui/react", "@heroicons/react"],
   },
   {
-    input: "dist/types/components/index.d.ts",
+    input: "src/components/index.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
-    plugins: [dts()],
+    plugins: [dts({ tsconfig: "./tsconfig.dts.json" })],
   },
 ];
 
-export default config; 
+export default config;

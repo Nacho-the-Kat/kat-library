@@ -7,6 +7,7 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/stories/**/*.{js,ts,jsx,tsx,mdx}", 
     "./.storybook/**/*.{js,ts,jsx,tsx,mdx}",
+    "../packages/kat-library/src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {
