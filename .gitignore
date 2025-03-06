@@ -20,6 +20,11 @@
 # production
 /build
 
+.rollup.
+.rollup.cache
+
+/dist
+
 # misc
 .DS_Store
 *.pem
