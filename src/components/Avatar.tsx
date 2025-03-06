@@ -17,7 +17,7 @@ const Avatar: React.FC<AvatarProps> = ({ imageUrl }) => {
   };
 
   return (
-    <>
+    <span>
       <div
         className="w-12 h-12 rounded-full overflow-hidden cursor-pointer border border-gray-300 dark:border-gray-700"
         onClick={handleOpenModal}
@@ -43,7 +43,7 @@ const Avatar: React.FC<AvatarProps> = ({ imageUrl }) => {
           </div>
         </div>
       )}
-    </>
+    </span>
   );
 };
 

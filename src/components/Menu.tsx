@@ -20,7 +20,7 @@ const MenuComponent: React.FC<MenuProps> = ({ items }) => {
   };
 
   return (
-    <nav className="bg-white dark:bg-gray-900 p-4 border-b border-gray-200 dark:border-gray-700">
+    <nav className="p-4">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* Mobile Menu */}
         <Menu as="div" className="relative inline-block text-left lg:hidden">

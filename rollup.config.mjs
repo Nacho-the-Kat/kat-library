@@ -17,7 +17,7 @@ const config = [
     plugins: [
       resolve(),
       commonjs(),
-      typescript({ tsconfig: "./tsconfig.json" }),
+      typescript({ tsconfig: "./tsconfig.build.json" }),
       postcss({
         config: {
           path: "./postcss.config.js",
@@ -34,7 +34,7 @@ const config = [
   {
     input: "dist/types/components/index.d.ts",
     output: [{ file: "dist/index.d.ts", format: "esm" }],
-    plugins: [dts()],
+    plugins: [dts({ tsconfig: "./tsconfig.dts.json" })],
   },
 ];
 
